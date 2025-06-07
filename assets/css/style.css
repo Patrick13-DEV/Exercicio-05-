@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*tema 1 {padrão}*/
+    --theme1-bg: hsl(222, 26%, 31%);
+    --theme1-keypad-bg: hsl(223, 31%, 20%);
+    --theme1-screen-bg: hsl(224, 36%, 15%);
+    --theme1-key-bg: hsl(30, 25%, 89%);
+    --theme-key-shadow: hsl(28, 16%, 65%);
+    --theme1-action-bg: hsl(225, 21%, 49%);
+    --theme1-action-shadow: hsl(224, 28%, 35%);
+    --theme1-equals-bg: hsl(6, 63%, 50%);
+    --theme1-equals-shadow: hsl(6, 70%, 34%);
+    --theme1-text: hsl(0, 0%, 100%);
+    --theme1-key-text: hsl(221, 14%, 31%);
+    /*tema2*/
+
+    --theme2-bg: hsla(220, 80%, 45%, 0.678);
+    --theme2-keypad-bg: hsl(220, 60%, 40%);
+    --theme2-screen-bg: hsl(220, 60%, 50%);
+    --theme2-key-bg: hsl(0, 0%, 100%);
+    --theme2-key-shadow: hsl(220, 40%, 30%);
+    --theme2-action-bg: hsl(45, 100%, 50%);
+    --theme2-action-shadow: hsl(45, 100%, 40%);
+    --theme2-equals-bg: hsl(0, 100%, 40%);
+    --theme2-equals-shadow: hsl(0, 100%, 40%);
+    --theme2-text: hsl(220, 80%, 20%);
+    --theme2-key-text: hsl(0, 0%, 100%);
+
+
+
+    --theme3-bg: hsl(33, 100%, 50%);
+    --theme3-keypad-bg: hsl(33, 30%, 15%);
+    --theme3-screen-bg: hsl(240, 30%, 15%);
+    --theme3-key-bg: hsl(0, 0%, 95%);
+    --theme3-key-shadow: hsl(0, 0%, 65%);
+    --theme3-action-bg: hsl(0, 0%, 20%);
+    --theme3-action-shadow: hsl(0, 0%, 10%);
+    --theme3-equals-bg: hsl(48, 100%, 50%);
+    --theme3-equals-shadow: hsl(48, 100%, 44%);
+    --theme3-text: hsl(0, 0%, 100%);
+    --theme3-key-text: hsl(0, 0%, 31%);
+}
+
+body {
+    font-family: 'league Spartan', sans-serif;
+    background-color: var(--theme1-bg);
+    color: var(--theme1-text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-container {
+    height: 640px;
+    width: 600px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+span {
+    font-size: 18px;
+    margin-top: auto;
+    ;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 220px;
+    gap: 15px;
+    justify-content: end;
+}
+
+.theme-controls {
+    align-items: center;
+    width: 80px;
+    ;
+}
+
+.theme-numbers {
+    gap: 80px;
+    font-size: 30px;
+
+}
+
+.theme-toggle {
+    height: 21px;
+    width: 55px;
+    background-color: rgb(40, 58, 58);
+    border-radius: 20px;
+    background-color: var();
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    position: relative;
+}
+
+.toggle-ball {
+    height: 13px;
+    width: 13px;
+    background-color: #b12121;
+    border-radius: 55%;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.3 ease;
+
+}
+
+.pos1 {
+    transform: translateX(0px);
+}
+
+.pos2 {
+    transform: translateX(15px);
+}
+
+.pos3 {
+    transform: translateX(35px);
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin: 10px 30px;
+    background-color: var(--theme1-screen-bg);
+    border-radius: 3%;
+    margin-bottom: 25px;
+}
+
+.result {
+    justify-content: flex-end;
+    margin-left: 420px;
+    font-size: 45px;
+}
+
+.keypad {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: auto;
+    height: 440px;
+    padding: 6px;
+    margin: 0 30px;
+    background-color: var(--theme1-keypad-bg);
+    border-radius: 3%;
+    margin-bottom: 20px;
+}
+
+.key {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 1%;
+    color: var(--theme1-key-text);
+    background-color: var(--theme1-key-bg);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.span-2 {
+    color: var(--theme1-text);
+    width: 213px;
+    font-size: 25px;
+    box-shadow: var(--theme1-equals-shadow);
+}
+
+.equals {
+    background-color: var(--theme1-equals-bg) !important;
+}
+
+.action {
+    background-color: var(--theme1-action-bg);
+    box-shadow: var(--theme1-action-shadow);
+    color: var(--theme1-text);
+}
+
+.theme-2 {
+    background-color: var(--theme2-bg);
+    color: var(--theme2-text);
+}
+
+.theme-2 .display {
+    background-color: var(--theme2-screen-bg);
+}
+
+.theme-2 .keypad {
+    background-color: var(--theme2-keypad-bg);
+}
+
+.theme-2 .key {
+    background-color: var(--theme2-key-bg);
+    box-shadow: 0 4px 0 0 var(--theme2-key-shadow);
+    ;
+}
+
+.theme-2 .action {
+    background-color: var(--theme2-action-bg);
+    box-shadow: var(--theme2-action-shadow);
+}
+
+.theme-2 .equals {
+    background-color: var(--theme2-equals-bg);
+    box-shadow: 0 4px 0 var(--theme2-equals-shadow);
+    color: var(--theme2-text);
+
+}
+
+.theme-2 .theme-toggle {
+    background-color: var(--theme2-keypad-bg);
+}
+
+.theme-2 .toggle-ball {
+    background-color: var(--theme2-equals-bg);
+}
+.theme-3 {
+    background-color: var(--theme3-bg);
+    color: var(--theme3-text);
+}
+
+.theme-3 .display {
+    background-color: var(--theme3-screen-bg);
+}
+
+.theme-3 .keypad {
+    background-color: var(--theme3-keypad-bg);
+}
+
+.theme-3 .key {
+    background-color: var(--theme3-key-bg);
+    box-shadow: 0 4px 0 0 var(--theme3-key-shadow);
+    ;
+}
+
+.theme-3 .action {
+    background-color: var(--theme3-action-bg);
+    box-shadow: var(--theme3-action-shadow);
+}
+
+.theme-3 .equals {
+    background-color: var(--theme3-equals-bg);
+    box-shadow: 0 4px 0 var(--theme3-equals-shadow);
+    color: var(--theme3-text);
+}
+
+.theme-3 .theme-toggle {
+    background-color: var(--theme3-keypad-bg);
+}
+
+.theme-3 .toggle-ball {
+    background-color: var(--theme3-equals-bg);
+}
